@@ -1,0 +1,20 @@
+#headerComponentt {
+  min-height: 100vh;
+  max-height: 25%;
+  min-width: 100vw;
+  max-width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  background-image: url("https://s3-eu-west-1.amazonaws.com/video.gallereplay.com/artistarea/Woman%27s+Hands+Typing+on+Laptop+at+Desk_04ed268f-abad-48fe-a6ea-49cb86d19b1c/Cinemagraph_watermark/1_small_files/cinemagraph.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.8;
+}
+
+#headerText {
+  margin-top: 15rem;
+  font-size: 5rem;
+  color: rgb(63, 115, 236);
+}
