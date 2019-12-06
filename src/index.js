@@ -1,3 +1,18 @@
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+//import Slider from './slider/slider'
+import Itempage from './itempage';
+
+import * as serviceWorker from './serviceWorker';
+
+// ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Itempage />, document.getElementById('Itempage'));
+//ReactDOM.render(<Slider />, document.getElementById('Slider'));
+
+
+
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
