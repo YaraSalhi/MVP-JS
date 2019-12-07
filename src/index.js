@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import AppF from "./AppF";
 //import Slider from './slider/slider'
-import Itempage from "./itempage";
-// import Header from "./header";
-import Footer from "./footer";
-import Headercomponent from "./headerComponent";
-import Home from "./home";
-import Payment from "./payment";
+// import Itempage from "./itempage";
+// // import Header from "./header";
+// import Footer from "./footer";
+// import Headercomponent from "./headerComponent";
+// import Home from "./home";
+// import Payment from "./payment";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(<AppF />, document.getElementById("root"));
