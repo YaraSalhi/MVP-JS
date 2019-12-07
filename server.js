@@ -1,16 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require ("body-parser");
-const path = require('path');
+const bodyParser = require("body-parser");
+const path = require("path");
 const app = express();
 
 // app.use(express.static(__dirname + "/client/dist"));
 // app.use(express.static(__dirname + "/node_modules"));
 // app.use(express.static(__dirname+"/client/src/components"))
-// //Config DB 
+// //Config DB
 const URI = require("./config/keys").mongoURI;
-console.log(URI)
-mongoose.connect( URI, { useNewUrlParser: true });
+console.log(URI);
+mongoose.connect(URI, { useNewUrlParser: true });
 
 var db = mongoose.connection;
 // db.on('error', console.error.bind(console, 'connection error:'));
@@ -20,6 +20,7 @@ var db = mongoose.connection;
 app.use(bodyParser.json());
 
 const reservationsModel = require("./models/item.js").reservationsModel;
+const hallsModel = require("./models/item.js").hallsModel;
 
 app.get("/", (req, res) => {res.send("end")})
 app.get("/reservations", (req, res) => {
@@ -29,6 +30,13 @@ app.get("/reservations", (req, res) => {
          res.json(reservationsModel)
     });
    })
-   const port = process.env.PORT || 8000;
-   app.listen(port, () => {
-   console.log("server started on port " + port)});
+app.get("/halls", (req, res) => {
+  hallsModel.find({}).then(hallsModel => {
+    res.json(hallsModel);
+  });
+});
+
+const port = process.env.PORT || 8000;
+app.listen(port, () => {
+  console.log("server started on port " + port);
+});

@@ -1,0 +1,19 @@
+#pic1{
+    width:650px;
+    padding:5px;
+    border:8px solid #0a0a0a;
+    background-color: #e6e6e6;
+    width: 550px;
+    height: 400px;
+    margin-left: 10%;
+    margin-top: 5%;
+    position: relative;
+};
+
+
+#slider{
+    height: 200px;
+    width: 700px;
+    margin-left: 10%;
+}
+

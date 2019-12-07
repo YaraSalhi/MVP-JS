@@ -3,8 +3,12 @@ import React from 'react';
 import './App.css';
 import $ from 'jquery';
 import Album from './album';
-import PrimarySearchAppBar from "./navbar";
- 
+import PrimarySearchAppBar from "./NavBar";
+import { red } from '@material-ui/core/colors';
+
+import NavBar from "./NavBar";
+
+
 
 
 
@@ -55,7 +59,8 @@ componentDidMount(){
 
 render(){
   
-var listItems = this.state.data.map((reservationsSchema) => {
+  
+var mainPage = this.state.data.map((reservationsSchema) => {
 
   return (
      <div style={{display:"flex",marginLeft:"5rem"}} >
@@ -84,9 +89,11 @@ var listItems = this.state.data.map((reservationsSchema) => {
 );
 return (
     <div >
-        <PrimarySearchAppBar/>
-        {listItems}
-          <Album/>
+      <NavBar/>
+            <Album/>
+            
+        {/* <PrimarySearchAppBar/> */}
+        {/* {mainPage} */}
         
     </div>
 )
@@ -101,27 +108,3 @@ export default App;
 
 
 
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;

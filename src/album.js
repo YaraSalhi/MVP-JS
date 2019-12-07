@@ -12,7 +12,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
+// /import Link from '@material-ui/core/Link';
+import { Route,Link, BrowserRouter as Router } from 'react-router-dom';
+import AppF from "./AppF";
+
 
 function Copyright() {
     
@@ -62,7 +65,13 @@ const useStyles = makeStyles(theme => ({
 
 
 const cards = ["https://1001freedownloads.s3.amazonaws.com/vector/thumb/70148/1380565708.png","https://www.pinclipart.com/picdir/middle/188-1880598_extra-clipart.png","https://www.pinclipart.com/picdir/middle/61-615996_you-are-going-to-love-the-additional-training.png", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU0NuXrh7tSDSuHh8a8FdYeK0XO88rf2mnE8rj4_tTN5DBd_Q4&s", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxlRExK2ZFiHeLX-6iac5iROqxKQsRgWtf8krCCEfSexRjq16B&s", "https://thumbs.dreamstime.com/z/productivity-efficiency-words-thinker-business-improve-output-streamline-responsive-process-d-person-thinking-38085219.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk2pm1nnL7rFmrnD5k7IieWbpIaVHl27G5p7UB8sHjrdqoHqX8&s", "https://cdn.xl.thumbs.canstockphoto.com/efficiency-in-the-work-place-as-a-concept-clipart_csp4065311.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYF9W0NmmmTemtxfyvzDhaMtIOq3J_YEqA0x9TKakkXSX5wj6h&s"];
-
+const ca = ["https://s3-eu-west-1.amazonaws.com/tjwlhotelcms/hotel_cms_data_live/hotel_images/5784149/4_38.jpg",
+"https://beuhairsalon.com/wp-content/uploads/2017/09/beuhair-interior-3-min-cropped.jpg",
+"https://images-na.ssl-images-amazon.com/images/I/71kzRRanJVL._SL1500_.jpg",
+"https://media.yoox.biz/items/38/38672134tc_14_f.jpg","https://www.olegcassinistore.com/12351/satin-cummerbund-ball-gown-wedding-dress-v3848.jpg",
+"http://img.cakesdecor.com/njiycfnx7mwavxipx5jt.jpg",
+"https://hypowerfuel.com/wp-content/uploads/2019/10/best-restaurants.jpg",
+"https://1001freedownloads.s3.amazonaws.com/vector/thumb/70148/1380565708.png"]
 export default function Album() {
   const classes = useStyles();
   
@@ -75,13 +84,13 @@ export default function Album() {
     <React.Fragment>
         
       <CssBaseline />
-      <AppBar position="relative">
+      {/* <AppBar position="relative">
         <Toolbar> 
-          <CameraIcon className={classes.icon} />
-          <Typography variant="h6" color="inherit" noWrap>
-Categories           </Typography>
-        </Toolbar>
-       </AppBar>
+          {/* <CameraIcon className={classes.icon} /> */}
+          {/* <Typography variant="h6"  noWrap> */}
+          {/* </Typography> */}
+        {/* </Toolbar> */}
+    {/* //    </AppBar> */} 
       <main>
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
@@ -111,12 +120,13 @@ Categories           </Typography>
         </div>
         <Container className={classes.cardGrid} maxWidth="md">          
           <Grid container spacing={4}>
-            {cards.map(card => (
+            {ca.map(card => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://www.coord-tech.com/images/Clients/Harir%20Palace%20Hotel%201690048531.jpg"
+                    
+                    image={card}
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
@@ -127,9 +137,20 @@ Categories           </Typography>
 اضغط على الصورة للاطلاع على اخر العروضات                    </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Book now
-                    </Button>
+                  <Router>
+    <div>
+      <ul>
+      
+        
+          <Link to="/AppF"><Button size="small" color="primary">
+                     Book Now
+                    </Button></Link>
+        
+        
+      </ul>
+         <Route path="/AppF" component={AppF} />
+    </div>
+  </Router>
                     <Button size="small" color="primary">
                       Explore more
                     </Button>
