@@ -50,7 +50,7 @@ const Items = () => {
               <ButtonBase className={classes.image}>
                 <img
                   className={classes.img}
-                  alt="photo"
+                  alt="hall"
                   src="https://www.amritlife.com/upload/category/2956035291543071559.jpg"
                 />
               </ButtonBase>
