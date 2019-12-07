@@ -21,11 +21,13 @@ app.use(bodyParser.json());
 
 const reservationsModel = require("./models/item.js").reservationsModel;
 
-
-
-app.get("/imgs/:id", (req, res) => {
+app.get("/", (req, res) => {res.send("end")})
+app.get("/reservations", (req, res) => {
+    console.log("data")
     reservationsModel.find({})
-       .then(reservationsModel => res.json(reservationsModel));
+       .then(reservationsModel =>{console.log(reservationsModel)
+         res.json(reservationsModel)
+    });
    })
    const port = process.env.PORT || 8000;
    app.listen(port, () => {

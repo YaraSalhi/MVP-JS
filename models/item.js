@@ -7,8 +7,14 @@ db.once('open', function() {
  console.log(" database connection succeded");
 });
 const reservationsSchema = new Schema ({
-  id: Number,
-
+    hallsImg:String,
+    saloonsImg:String,
+    flowersImg:String,
+    tuxedosImg:String,
+    dressesImg:String,
+    cakeImg:String,
+    restaurantsImg:String,
+    extraImg:String
 });
 const userinfo= new Schema({
     name : String,
@@ -76,7 +82,7 @@ const extra= new Schema({
 
 
 
-const reservationsModel = mongoose.model("Item", reservationsSchema);
+const reservationsModel = mongoose.model("Items", reservationsSchema);
 const UserinfoModel = mongoose.model("userinfo", userinfo);
 const restaurantsModel = mongoose.model("restaurants", restaurants);
 const cakeShopModel = mongoose.model("cakeShop", cakeShop);
@@ -91,8 +97,14 @@ const extraModel = mongoose.model("extra", extra);
 
 
 reservation1 = new reservationsModel({
-  id: 4,
-  
+    hallsImg:"String",
+    saloonsImg:"String",
+    flowersImg:"String",
+    tuxedosImg:"String",
+    dressesImg:"String",
+    cakeImg:"String",
+    restaurantsImg:"String",
+    extraImg:"String"  
 });
 userinfo1 = new  UserinfoModel({
     name : "String",
@@ -159,116 +171,116 @@ extra1 = new  extraModel({
 })
 
     
-reservation1.save((error,result)=>{
-      if(error){
-        console.log("errrrrror",error
-        )
-      }
-      else{
-      console.log("reservation done")
-      }
-      });
+// reservation1.save((error,result)=>{
+//       if(error){
+//         console.log("errrrrror",error
+//         )
+//       }
+//       else{
+//       console.log("reservation done")
+//       }
+//       });
 
 
-userinfo1.save((error,result)=>{
-        if(error){
-        console.log("user error",error
-        )
-        }
-        else{
-        console.log("user done")
-        }
-        });
+// userinfo1.save((error,result)=>{
+//         if(error){
+//         console.log("user error",error
+//         )
+//         }
+//         else{
+//         console.log("user done")
+//         }
+//         });
 
 
-restaurants1.save((error,result)=>{
-    if(error){
-     console.log("restaurants error",error
-    )
-    }
-    else{
-    console.log("restaurants done")
-    }
-    });
+// restaurants1.save((error,result)=>{
+//     if(error){
+//      console.log("restaurants error",error
+//     )
+//     }
+//     else{
+//     console.log("restaurants done")
+//     }
+//     });
 
 
-cakeShop1.save((error,result)=>{
-     if(error){
-    console.log("cakeshops error",error
-        )
-        }
-    else{
-    console.log("cakeshops done")
-    }
-    });
+// cakeShop1.save((error,result)=>{
+//      if(error){
+//     console.log("cakeshops error",error
+//         )
+//         }
+//     else{
+//     console.log("cakeshops done")
+//     }
+//     });
 
 
-saloons1.save((error,result)=>{
-    if(error){
-     console.log("saloons error",error
-        )
-        }
-    else{
-    console.log("saloons done")
-    }
-    });
+// saloons1.save((error,result)=>{
+//     if(error){
+//      console.log("saloons error",error
+//         )
+//         }
+//     else{
+//     console.log("saloons done")
+//     }
+//     });
                     
-flowersShops1.save((error,result)=>{
-    if(error){
-    console.log("flowers error",error
-    )
-    }
-    else{
-    console.log("flowers done")
-    }
-    });
+// flowersShops1.save((error,result)=>{
+//     if(error){
+//     console.log("flowers error",error
+//     )
+//     }
+//     else{
+//     console.log("flowers done")
+//     }
+//     });
 
-dressesShops1.save((error,result)=>{
-    if(error){
-     console.log("dresses error",error
-        )
-        }
-        else{
-        console.log("dresses done")
-        }
-        });
+// dressesShops1.save((error,result)=>{
+//     if(error){
+//      console.log("dresses error",error
+//         )
+//         }
+//         else{
+//         console.log("dresses done")
+//         }
+//         });
 
-menShops1.save((error,result)=>{
-    if(error){
-    console.log("menshops error",error
-    )
-    }
-    else{
-    console.log("menshops done")
-    }
-    });
-hall1.save((error,result)=>{
-    if(error){
-    console.log("hall error",error
-     )
-    }
-    else{
-    console.log("hall done")
-    }
-    });
+// menShops1.save((error,result)=>{
+//     if(error){
+//     console.log("menshops error",error
+//     )
+//     }
+//     else{
+//     console.log("menshops done")
+//     }
+//     });
+// hall1.save((error,result)=>{
+//     if(error){
+//     console.log("hall error",error
+//      )
+//     }
+//     else{
+//     console.log("hall done")
+//     }
+//     });
 
- extra1.save((error,result)=>{
-    if(error){
-    console.log("extra error",error
-     )
-    }
+//  extra1.save((error,result)=>{
+//     if(error){
+//     console.log("extra error",error
+//      )
+//     }
 
     
-    else{
-    console.log("extra done")
-    }
-    });
+//     else{
+//     console.log("extra done")
+//     }
+//     });
       
 
 
 module.exports.reservationsModel = reservationsModel;
 module.exports.UserinfoModel=UserinfoModel;
-module.exports.reservationsModel=restaurantsModel;
+module.exports.restaurantsModel=restaurantsModel;
 module.exports.cakeShopModel=cakeShopModel;
 module.exports.saloonsModel=saloonsModel;
 module.exports.flowersShopsModel=flowersShopsModel;
