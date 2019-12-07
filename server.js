@@ -20,6 +20,7 @@ var db = mongoose.connection;
 app.use(bodyParser.json());
 
 const reservationsModel = require("./models/item.js").reservationsModel;
+const hallsModel = require("./models/item.js").hallsModel;
 
 app.get("/halls", (req, res) => {
   hallsModel.find({}).then(hallsModel => {
