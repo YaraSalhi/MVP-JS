@@ -7,7 +7,7 @@ db.once("open", function() {
   console.log(" database connection succeded");
 });
 const userSchema = new Schema ({
-    name:String,
+    id:Number,
     email:String,
     password:String,
     role:String,
@@ -16,31 +16,34 @@ const userSchema = new Schema ({
 
 const ownerSchema = new Schema({
   name: String,
-  shopName: String,
-  email: String,
-  password: String,
-  location: String,
-  category:String
+  userId: Number,
+  profileImg: String,
+  
 });
 
 const customerSchema = new Schema({
   name: String,
-  email: String,
-  password: String,
-  mobile: Number
-});
-const ShopsSchema = new Schema({
-  name: String,
-  description:String,
+  userId: String,
+  profileImg: String,
 
 });
-const itemSchema = new Schema({
-  name: String,
-  location: String,
-  contactInfo: Number,
-  price: Number,
-  owner: String,
+const ShopsSchema = new Schema({
+  ownerId: String,
+  location:String,
+  contactInfo:Number,
+  price:Number,
+  openingHours:Number,
+  capacity:Number,
   description:String,
+  image:String
+
+});
+const AppointmentsSchema = new Schema({
+  shopId: Number,
+  timeSlot: Number,
+  date: Number,
+  customerId: Number,
+  
 
 });
 
@@ -49,105 +52,106 @@ const UserModel = mongoose.model("user", userSchema);
 const OwnerModel = mongoose.model("owner", ownerSchema);
 const CustomerModel = mongoose.model("customer", customerSchema);
 const ShopsModel = mongoose.model("shops", ShopsSchema);
-const ItemModel = mongoose.model("item", itemSchema);
+const AppointmentsModel = mongoose.model("appointment", AppointmentsSchema);
 
 
 
 
 user1 = new UserModel({
-  name:"String",
+  id:4,
   email:"String",
   password:"String",
   role:"String",
 });
 owner1 = new  OwnerModel({
   name: "String",
-  shopName: "String",
-  email: "String",
-  password: "String",
-  location: "String",
-  category:"String"
+  userId: 2,
+  profileImg: "String",
 })
 customer1 = new  CustomerModel({
   name: "String",
-  email: "String",
-  password: "String",
-  mobile: 3
+  userId: 2,
+  profileImg: "String",
 })
 shops1 = new ShopsModel({
-  name: "String",
+  ownerId: Number,
+  location:"String",
+  contactInfo:3,
+  price:3,
+  openingHours:3,
+  capacity:2,
   description:"String",
+  image:"String"
 })
-item1 = new  ItemModel({
-  name: "String",
-  location: "String",
-  contactInfo: 4,
-  price: 5,
-  owner: "String",
-  description:"String",
+
+appointment1 = new  AppointmentsModel({
+  shopId: 2,
+  timeSlot: 1,
+  date:2,
+  customerId: 2,
 })
 
 
     
-// user1.save((error,result)=>{
-//       if(error){
-//         console.log("errrrrror",error
-//         )
-//       }
-//       else{
-//       console.log("user done")
-//       }
-//       });
+user1.save((error,result)=>{
+      if(error){
+        console.log("errrrrror",error
+        )
+      }
+      else{
+      console.log("user done")
+      }
+      });
 
 
-//    owner1.save((error,result)=>{
-//       if(error){
-//        console.log("restaurants error",error
-//       )
-//       }
-//       else{
-//       console.log("owner done")
-//       }
-//       });
+   owner1.save((error,result)=>{
+      if(error){
+       console.log("restaurants error",error
+      )
+      }
+      else{
+      console.log("owner done")
+      }
+      });
 
-// customer1.save((error,result)=>{
-//         if(error){
-//         console.log("user error",error
-//         )
-//         }
-//         else{
-//         console.log("customer done")
-//         }
-//         });
-
-
-// shops1.save((error,result)=>{
-//      if(error){
-//     console.log("cakeshops error",error
-//         )
-//         }
-//     else{
-//     console.log("shops done")
-//     }
-//     });
+customer1.save((error,result)=>{
+        if(error){
+        console.log("user error",error
+        )
+        }
+        else{
+        console.log("customer done")
+        }
+        });
 
 
-// item1.save((error,result)=>{
-//     if(error){
-//      console.log("saloons error",error
-//         )
-//         }
-//     else{
-//     console.log("item done")
-//     }
-//     });
+shops1.save((error,result)=>{
+     if(error){
+    console.log("cakeshops error",error
+        )
+        }
+    else{
+    console.log("shops done")
+    }
+    });
+
+
+appointment1.save((error,result)=>{
+    if(error){
+     console.log("saloons error",error
+        )
+        }
+    else{
+    console.log("appointment done")
+    }
+    });
 
 
 module.exports.UserModel = UserModel;
 module.exports.OwnerModel=OwnerModel;
 module.exports.CustomerModel=CustomerModel;
 module.exports.ShopsModel=ShopsModel;
-module.exports.ItemModel=ItemModel;
+module.exports.AppointmentsModel=AppointmentsModel;
 
 
 
