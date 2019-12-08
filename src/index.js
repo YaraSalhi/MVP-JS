@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import "./index.css";
 import AppF from "./AppF";
@@ -10,23 +10,38 @@ import AppF from "./AppF";
 // import Home from "./home";
 // import Payment from "./payment";
 import * as serviceWorker from "./serviceWorker";
+import App from './App';
+import album from './album';
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import NavBar from "./NavBar";
 
-ReactDOM.render(<AppF />, document.getElementById("root"));
-// ReactDOM.render(<App />, document.getElementById('root'));
-// ReactDOM.render(<Itempage />, document.getElementById("Itempage"));
-// //ReactDOM.render(<Slider />, document.getElementById('Slider'));
+const css = `
+    .my-element {
+        marginTop:100px;
+        list-style-type:none
+    }
+`
+const routing = (
+    <Router>
+    <div>
+      <ul class="my-element"><style>{css}</style>
+        <li>
+          <Link to="/"><button>Home</button></Link>
+        </li>
+        <li>
+          <Link to="/AppF"><button>Category</button></Link>
+        </li>
+        
+      </ul>
+      <Route exact path="/" component={App} />
+      <Route path="/AppF" component={AppF} />
+    </div>
+  </Router>
+   
+  )
+ 
+  ReactDOM.render(routing, document.getElementById('root'))
+  // ReactDOM.render(<AppF />, document.getElementById("root"));
 
-// // ReactDOM.render(<App />, document.getElementById("root"));
 
-// ReactDOM.render(
-//   <Headercomponent />,
-//   document.getElementById("headerComponent")
-// );
-// ReactDOM.render(<Payment />, document.getElementById("paymant"));
-// ReactDOM.render(<Home />, document.getElementById("home"));
-// ReactDOM.render(<Footer />, document.getElementById("footer"));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// ReactDOM.render(<App />,document.getElementById("root2"));
