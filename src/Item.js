@@ -1,6 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
-import $ from "jquery";
-import { createStore } from "redux";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
@@ -52,7 +50,7 @@ const Items = () => {
               <ButtonBase className={classes.image}>
                 <img
                   className={classes.img}
-                  alt="photo"
+                  alt="hall"
                   src="https://www.amritlife.com/upload/category/2956035291543071559.jpg"
                 />
               </ButtonBase>
