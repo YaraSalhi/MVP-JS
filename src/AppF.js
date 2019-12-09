@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import ListItem from "./ListItem";
 import NavBar from "./NavBar";
+import Items from "./Item";
 
 export default class AppF extends React.Component {
   render() {
