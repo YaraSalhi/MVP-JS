@@ -36,4 +36,4 @@ const routing = (
 ReactDOM.render(routing, document.getElementById("root"));
 // ReactDOM.render(<AppF />, document.getElementById("root"));
 
-ReactDOM.render(<ItemComponent />, document.getElementById("root2"));
+// ReactDOM.render(<ItemComponent />, document.getElementById("root2"));

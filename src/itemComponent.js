@@ -108,12 +108,14 @@ export default class ItemComponent extends Component {
                     marginLeft: "7em"
                   }}
                 >
-                  <h2>{that.state.price} per Hour</h2>
-                  <h2> details : {that.state.details}</h2>
-                  <h2>
-                    {" "}
-                    contact info : {that.state.contactInfo} <br />
-                  </h2>
+                  <center>
+                    <h2>{that.state.price} per Hour</h2>
+                    <h2> تفاصيل : {that.state.details}</h2>
+                    <h2>
+                      {" "}
+                      معلومات الاتصال : {that.state.contactInfo} <br />
+                    </h2>
+                  </center>
                 </div>
               </Typography>
             </CardContent>
