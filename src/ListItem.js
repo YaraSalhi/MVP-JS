@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Items from "./Item";
+import Item from "./Item";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -16,13 +16,13 @@ export default function ListItem() {
     return (
       <React.Fragment>
         <Grid item xs={4}>
-          <Items />
+          <Item />
         </Grid>
         <Grid item xs={4}>
-          <Items />
+          <Item />
         </Grid>
         <Grid item xs={4}>
-          <Items />
+          <Item />
         </Grid>
       </React.Fragment>
     );

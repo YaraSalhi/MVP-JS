@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import AppF from "./AppF";
+import Item from "./Item";
+//import Slider from './slider/slider'
+// import Itempage from "./itempage";
+// // import Header from "./header";
+// import Footer from "./footer";
+// import Headercomponent from "./headerComponent";
+// import Home from "./home";
+// import Payment from "./payment";
 import * as serviceWorker from "./serviceWorker";
 import App from "./App";
 import album from "./album";

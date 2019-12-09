@@ -20,19 +20,21 @@ var db = mongoose.connection;
 app.use(bodyParser.json());
 
 const reservationsModel = require("./models/item.js").reservationsModel;
-const hallsModel = require("./models/item.js").hallsModel;
+const ShopsModel = require("./models/item.js").ShopsModel;
 
-app.get("/", (req, res) => {res.send("end")})
+app.get("/", (req, res) => {
+  res.send("end");
+});
 app.get("/reservations", (req, res) => {
-    console.log("data")
-    reservationsModel.find({})
-       .then(reservationsModel =>{console.log(reservationsModel)
-         res.json(reservationsModel)
-    });
-   })
-app.get("/halls", (req, res) => {
-  hallsModel.find({}).then(hallsModel => {
-    res.json(hallsModel);
+  console.log("data");
+  reservationsModel.find({}).then(reservationsModel => {
+    console.log(reservationsModel);
+    res.json(reservationsModel);
+  });
+});
+app.get("/shops", (req, res) => {
+  ShopsModel.find({}).then(ShopsModel => {
+    res.json(ShopsModel);
   });
 });
 
