@@ -1,24 +1,43 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import AppF from "./AppF";
 import * as serviceWorker from "./serviceWorker";
-// import Header from "./header";
-import Footer from "./footer";
-import Headercomponent from "./headerComponent";
-import Home from "./home";
-import Payment from "./payment";
-// ReactDOM.render(<App />, document.getElementById("root"));
-
-ReactDOM.render(
-  <Headercomponent />,
-  document.getElementById("headerComponent")
+import App from "./App";
+import album from "./album";
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
+import NavBar from "./NavBar";
+import ItemComponent from "./itemComponent";
+import MediaCard from "./cardForItem";
+const css = `
+    .my-element {
+        marginTop:100px;
+        list-style-type:none
+    }
+`;
+const routing = (
+  <Router>
+    <div>
+      <ul class="my-element">
+        <style>{css}</style>
+        <li>
+          <Link to="/">
+            <button>Home</button>
+          </Link>
+        </li>
+        <li>
+          <Link to="/AppF">
+            <button>Category</button>
+          </Link>
+        </li>
+      </ul>
+      <Route exact path="/" component={App} />
+      <Route path="/AppF" component={AppF} />
+    </div>
+  </Router>
 );
-ReactDOM.render(<Payment />, document.getElementById("paymant"));
-ReactDOM.render(<Home />, document.getElementById("home"));
-ReactDOM.render(<Footer />, document.getElementById("footer"));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(routing, document.getElementById("root"));
+// ReactDOM.render(<AppF />, document.getElementById("root"));
+
+// ReactDOM.render(<ItemComponent />, document.getElementById("root2"));
