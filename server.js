@@ -33,7 +33,7 @@ app.get("/reservations", (req, res) => {
   });
 });
 app.get("/shops", (req, res) => {
-  ShopsModel.find({}).then(ShopsModel => {
+  ShopsModel.find({ description: "hall" }).then(ShopsModel => {
     res.json(ShopsModel);
   });
 });
