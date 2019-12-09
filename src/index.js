@@ -15,7 +15,8 @@ import App from "./App";
 import album from "./album";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import NavBar from "./NavBar";
-
+import ItemComponent from "./itemComponent";
+import MediaCard from "./cardForItem";
 const css = `
     .my-element {
         marginTop:100px;
@@ -47,4 +48,4 @@ const routing = (
 ReactDOM.render(routing, document.getElementById("root"));
 // ReactDOM.render(<AppF />, document.getElementById("root"));
 
-// ReactDOM.render(<App />,document.getElementById("root2"));
+// ReactDOM.render(<ItemComponent />, document.getElementById("root2"));
