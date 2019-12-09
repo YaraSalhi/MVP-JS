@@ -9,27 +9,32 @@ const app = express();
 // app.use(express.static(__dirname+"/client/src/components"))
 // //Config DB
 const URI = require("./config/keys").mongoURI;
+
 console.log(URI);
 mongoose.connect(URI, { useNewUrlParser: true });
 
 var db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function() {
-//  console.log(" database connection succeded");
-// });
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", function() {
+  console.log("we are connected");
+});
 app.use(bodyParser.json());
-
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("src"));
 const reservationsModel = require("./models/item.js").reservationsModel;
 const hallsModel = require("./models/item.js").hallsModel;
+const shopModel = require("./models/item.js").ShopsModel;
 
-app.get("/", (req, res) => {res.send("end")})
+app.get("/", (req, res) => {
+  res.send("end");
+});
 app.get("/reservations", (req, res) => {
-    console.log("data")
-    reservationsModel.find({})
-       .then(reservationsModel =>{console.log(reservationsModel)
-         res.json(reservationsModel)
-    });
-   })
+  console.log("data");
+  reservationsModel.find({}).then(reservationsModel => {
+    console.log(reservationsModel);
+    res.json(reservationsModel);
+  });
+});
 app.get("/halls", (req, res) => {
   hallsModel.find({}).then(hallsModel => {
     res.json(hallsModel);
