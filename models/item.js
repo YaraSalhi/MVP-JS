@@ -25,6 +25,7 @@ const customerSchema = new mongoose.Schema({
   profileImg: String
 });
 const ShopsSchema = new mongoose.Schema({
+  id: Number,
   ownerId: String,
   location: String,
   contactInfo: String,
@@ -65,6 +66,7 @@ customer1 = new CustomerModel({
   profileImg: "String"
 });
 shops1 = new ShopsModel({
+  id: 9,
   ownerId: "2",
   location:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13536.790522042322!2d35.83889189999999!3d31.9826576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca185283dfb89%3A0x611dda32fcd10faa!2z2LPZitiq2Yog2YXZiNmE!5e0!3m2!1sar!2sjo!4v1575807547103!5m2!1sar!2sjo",
@@ -114,45 +116,45 @@ appointment1 = new AppointmentsModel({
   customerId: 2
 });
 
-user1.save((error, result) => {
-  if (error) {
-    console.log("errrrrror", error);
-  } else {
-    console.log("user done");
-  }
-});
+// user1.save((error, result) => {
+//   if (error) {
+//     console.log("errrrrror", error);
+//   } else {
+//     console.log("user done");
+//   }
+// });
 
-owner1.save((error, result) => {
-  if (error) {
-    console.log("restaurants error", error);
-  } else {
-    console.log("owner done");
-  }
-});
+// owner1.save((error, result) => {
+//   if (error) {
+//     console.log("restaurants error", error);
+//   } else {
+//     console.log("owner done");
+//   }
+// });
 
-customer1.save((error, result) => {
-  if (error) {
-    console.log("user error", error);
-  } else {
-    console.log("customer done");
-  }
-});
+// customer1.save((error, result) => {
+//   if (error) {
+//     console.log("user error", error);
+//   } else {
+//     console.log("customer done");
+//   }
+// });
 
-shops1.save((error, result) => {
-  if (error) {
-    console.log("cakeshops error", error);
-  } else {
-    console.log("shops done");
-  }
-});
+// shops1.save((error, result) => {
+//   if (error) {
+//     console.log("cakeshops error", error);
+//   } else {
+//     console.log("shops done");
+//   }
+// });
 
-appointment1.save((error, result) => {
-  if (error) {
-    console.log("saloons error", error);
-  } else {
-    console.log("appointment done");
-  }
-});
+// appointment1.save((error, result) => {
+//   if (error) {
+//     console.log("saloons error", error);
+//   } else {
+//     console.log("appointment done");
+//   }
+// });
 
 module.exports.UserModel = UserModel;
 module.exports.OwnerModel = OwnerModel;

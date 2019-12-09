@@ -1,14 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import AppF from "./AppF";
-import * as serviceWorker from "./serviceWorker";
 import App from "./App";
-import album from "./album";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
-import NavBar from "./NavBar";
 import ItemComponent from "./itemComponent";
-import MediaCard from "./cardForItem";
 const css = `
     .my-element {
         marginTop:100px;

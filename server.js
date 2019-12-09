@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("src"));
 const reservationsModel = require("./models/item.js").reservationsModel;
 const hallsModel = require("./models/item.js").hallsModel;
-const shopModel = require("./models/item.js").ShopsModel;
+const ShopsModel = require("./models/item.js").ShopsModel;
 
 app.get("/", (req, res) => {
   res.send("end");
@@ -41,11 +41,11 @@ app.get("/halls", (req, res) => {
   });
 });
 ////////Basima part:
-app.get("/item/id", function(req, res) {
+app.get("/id", function(req, res) {
   var d = req.query.id;
   console.log(d);
   console.log("Request Type:", req.method);
-  Item.findOne({ id: d }, (err, data) => {
+  ShopsModel.findOne({ id: d }, (err, data) => {
     if (err) {
       console.log("Err", err);
     }
