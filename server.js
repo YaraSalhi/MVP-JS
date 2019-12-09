@@ -40,6 +40,20 @@ app.get("/halls", (req, res) => {
     res.json(hallsModel);
   });
 });
+////////Basima part:
+app.get("/item/id", function(req, res) {
+  var d = req.query.id;
+  console.log(d);
+  console.log("Request Type:", req.method);
+  Item.findOne({ id: d }, (err, data) => {
+    if (err) {
+      console.log("Err", err);
+    }
+    console.log(data);
+    res.status(200).send(data);
+  });
+  //next();
+});
 
 const port = process.env.PORT || 8000;
 app.listen(port, () => {

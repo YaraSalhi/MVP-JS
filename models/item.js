@@ -82,7 +82,7 @@ shops1 = new ShopsModel({
     },
     {
       url:
-        "ihttps://mybookpk.s3.amazonaws.com/assets/upload/halls/hall_2016oRW5zQzE7TeqySPl92nfsWDnQJGt7O3sws7HiLWS"
+        "https://mybookpk.s3.amazonaws.com/assets/upload/halls/hall_2016oRW5zQzE7TeqySPl92nfsWDnQJGt7O3sws7HiLWS"
     },
     {
       url:

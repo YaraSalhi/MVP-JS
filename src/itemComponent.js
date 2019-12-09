@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import $ from "jquery";
 // import NavBar from "./NavBar";
 import MediaCard from "./cardForItem";
 import SimpleImageSlider from "react-simple-image-slider";
@@ -7,6 +8,31 @@ import SimpleImageSlider from "react-simple-image-slider";
 export default class ItemComponent extends Component {
   constructor(props) {
     super(props);
+    this.state = { id: "", imges: [] };
+  }
+  componentDidMount() {
+    var that = this;
+    var path = window.location.href;
+    var id_ = path.substring(path.indexOf("=") + 1);
+    if (id_ === "") {
+      id_ = 1;
+    }
+    console.log(id_);
+    $.ajax({
+      type: "GET",
+      url: "/id/?id=" + that.state.id,
+      data: { id: id_ },
+      //   dataType: "application/json",
+      success: function(data) {
+        console.log("ajax", data);
+        that.setState({ id: data.id, imges: data.imges });
+        console.log("DONE!");
+        console.log(that.state.imges);
+      },
+      error: function(err) {
+        console.log(err, "kjhsdkajs");
+      }
+    });
   }
   render() {
     const images = [
@@ -49,7 +75,7 @@ export default class ItemComponent extends Component {
             style={{ marginTop: "8rem" }}
             width={900}
             height={400}
-            images={images}
+            images={this.state.imges}
           />
 
           <MediaCard />
