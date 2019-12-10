@@ -18,7 +18,7 @@ const ownerSchema = new mongoose.Schema({
   userId: Number,
   profileImg: String
 });
-
+//
 const customerSchema = new mongoose.Schema({
   name: String,
   userId: String,
