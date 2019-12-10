@@ -38,6 +38,11 @@ app.get("/reservations", (req, res) => {
 app.get("/halls", (req, res) => {
   hallsModel.find({}).then(hallsModel => {
     res.json(hallsModel);
+  })
+})
+app.get("/shops", (req, res) => {
+  ShopsModel.find({ description: "hall" }).then(ShopsModel => {
+    res.json(ShopsModel);
   });
 });
 ////////Basima part:
@@ -59,3 +64,4 @@ const port = process.env.PORT || 8000;
 app.listen(port, () => {
   console.log("server started on port " + port);
 });
+  

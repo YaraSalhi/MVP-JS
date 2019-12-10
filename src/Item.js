@@ -29,11 +29,11 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Items = () => {
+const Item = () => {
   const [data, setData] = useState([]);
   //instead of DidMount()
   useEffect(() => {
-    axios.get("halls").then(({ data }) => {
+    axios.get("shops").then(({ data }) => {
       setData(data);
     });
   }, [setData]);
@@ -48,11 +48,7 @@ const Items = () => {
           <Grid container spacing={2}>
             <Grid item>
               <ButtonBase className={classes.image}>
-                <img
-                  className={classes.img}
-                  alt="hall"
-                  src="https://www.amritlife.com/upload/category/2956035291543071559.jpg"
-                />
+                <img className={classes.img} alt="hall" src={item.image} />
               </ButtonBase>
             </Grid>
             <Grid item xs={12} sm container>
@@ -88,4 +84,4 @@ const Items = () => {
     </div>
   );
 };
-export default Items;
+export default Item;

@@ -2,6 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import AppF from "./AppF";
+<<<<<<< HEAD
+=======
+import Item from "./Item";
+//import Slider from './slider/slider'
+// import Itempage from "./itempage";
+// // import Header from "./header";
+// import Footer from "./footer";
+// import Headercomponent from "./headerComponent";
+// import Home from "./home";
+// import Payment from "./payment";
+import * as serviceWorker from "./serviceWorker";
+>>>>>>> e1b8e3f406f2ec4dbbc8f5745111049561dc9e9f
 import App from "./App";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import ItemComponent from "./itemComponent";

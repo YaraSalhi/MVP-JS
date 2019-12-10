@@ -7,6 +7,7 @@ import PrimarySearchAppBar from "./NavBar";
 import { red } from "@material-ui/core/colors";
 
 import NavBar from "./NavBar";
+import DateSelector from "./Calender";
 
 class App extends React.Component {
   constructor(props) {
@@ -133,6 +134,7 @@ class App extends React.Component {
     return (
       <div>
         <NavBar />
+        {/* <DateSelector /> */}
         <Album />
 
         {/* <PrimarySearchAppBar/> */}
