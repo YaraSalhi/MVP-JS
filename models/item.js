@@ -27,6 +27,8 @@ const customerSchema = new mongoose.Schema({
 const ShopsSchema = new mongoose.Schema({
   id: Number,
   ownerId: String,
+  name: String,
+
   location: String,
   contactInfo: String,
   price: Number,

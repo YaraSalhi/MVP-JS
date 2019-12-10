@@ -5,6 +5,7 @@ import AppF from "./AppF";
 import App from "./App";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import ItemComponent from "./itemComponent";
+import Owner from "./ownerProfile";
 const css = `
     .my-element {
         marginTop:100px;
@@ -33,7 +34,7 @@ const routing = (
   </Router>
 );
 
-ReactDOM.render(routing, document.getElementById("root"));
+// ReactDOM.render(routing, document.getElementById("root"));
 // ReactDOM.render(<AppF />, document.getElementById("root"));
 
-// ReactDOM.render(<ItemComponent />, document.getElementById("root2"));
+ReactDOM.render(<Owner />, document.getElementById("root2"));
