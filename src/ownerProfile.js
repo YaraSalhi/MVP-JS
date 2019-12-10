@@ -2,8 +2,8 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
+// import FormControlLabel from "@material-ui/core/FormControlLabel";
+// import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
 
 export default function Owner() {
@@ -74,7 +74,7 @@ export default function Owner() {
             required
             id="zip"
             name="zip"
-            label="Zip / Postal code"
+            label=""
             fullWidth
             autoComplete="billing postal-code"
           />
