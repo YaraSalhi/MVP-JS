@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.7.1",
     "@material-ui/icons": "^4.5.1",
+    "@paypal/checkout-server-sdk": "^1.0.2",
     "axios": "^0.19.0",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
@@ -17,6 +18,7 @@
     "react-scripts": "3.2.0",
     "react-simple-image-slider": "^1.0.2",
     "react-social-login-buttons": "^3.0.0",
+    "react-stripe-checkout": "^2.6.3",
     "redux": "^4.0.4",
     "stripe": "^7.14.0"
   },

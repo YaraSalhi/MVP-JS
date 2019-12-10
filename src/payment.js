@@ -1,28 +1,58 @@
-import React from "react";
-import "./header.css";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
-import Header from "./headerComponent";
+// 'use strict';
 
-const styles = {
-  toolbar: {
-    button: {
-      fontSize: "5rem"
-    }
-  }
-};
+// /**
+//  *
+//  * PayPal Node JS SDK dependency
+//  */
+// const checkoutNodeJssdk = require('@paypal/checkout-server-sdk');
 
-class Payment extends React.Component {
-  render() {
-    return (
-      //   <AppBar position="static" id="head">
-      <div>HI IM FROM THE PAYMET</div>
-    );
-  }
-}
+// /**
+//  *
+//  * Returns PayPal HTTP client instance with environment that has access
+//  * credentials context. Use this instance to invoke PayPal APIs, provided the
+//  * credentials have access.
+//  */
+// function client() {
+//     return new checkoutNodeJssdk.core.PayPalHttpClient(environment());
+// }
 
-Payment.propTypes = {
-  classes: PropTypes.object.isRequired
-};
+// /**
+//  *
+//  * Set up and return PayPal JavaScript SDK environment with PayPal access credentials.
+//  * This sample uses SandboxEnvironment. In production, use LiveEnvironment.
+//  *
+//  */
+// function environment() {
+//     let clientId = process.env.PAYPAL_CLIENT_ID || 'PAYPAL-SANDBOX-CLIENT-ID';
+//     let clientSecret = process.env.PAYPAL_CLIENT_SECRET || 'PAYPAL-SANDBOX-CLIENT-SECRET';
 
-export default withStyles(styles)(Payment);
+//     return new checkoutNodeJssdk.core.SandboxEnvironment(
+//         clientId, clientSecret
+//     );
+// }
+
+// async function prettyPrint(jsonData, pre=""){
+//     let pretty = "";
+//     function capitalize(string) {
+//         return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+//     }
+//     for (let key in jsonData){
+//         if (jsonData.hasOwnProperty(key)){
+//             if (isNaN(key))
+//               pretty += pre + capitalize(key) + ": ";
+//             else
+//               pretty += pre + (parseInt(key) + 1) + ": ";
+//             if (typeof jsonData[key] === "object"){
+//                 pretty += "\n";
+//                 pretty += await prettyPrint(jsonData[key], pre + "    ");
+//             }
+//             else {
+//                 pretty += jsonData[key] + "\n";
+//             }
+
+//         }
+//     }
+//     return pretty;
+// }
+
+// module.exports = {client: client, prettyPrint:prettyPrint};
