@@ -19,7 +19,7 @@ import ItemComponent from "./itemComponent";
 import Owner from "./ownerProfile";
 const css = `
     .my-element {
-        marginTop:100px;
+        marginTop:70px;
         list-style-type:none
     }
 `;
