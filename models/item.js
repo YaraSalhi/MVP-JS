@@ -6,7 +6,11 @@ db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function() {
   console.log(" database connection succeded");
 });
+<<<<<<< HEAD
 const userSchema = new mongoose.Schema({
+=======
+const userSchema = new Schema({
+>>>>>>> e1b8e3f406f2ec4dbbc8f5745111049561dc9e9f
   id: Number,
   email: String,
   password: String,
@@ -27,14 +31,24 @@ const customerSchema = new mongoose.Schema({
 const ShopsSchema = new mongoose.Schema({
   id: Number,
   ownerId: String,
+<<<<<<< HEAD
   location: String,
   contactInfo: String,
+=======
+  name: String,
+  location: String,
+  contactInfo: Number,
+>>>>>>> e1b8e3f406f2ec4dbbc8f5745111049561dc9e9f
   price: Number,
   openingHours: Number,
   capacity: Number,
   description: String,
+<<<<<<< HEAD
   image: String,
   imageSlider: Array
+=======
+  image: String
+>>>>>>> e1b8e3f406f2ec4dbbc8f5745111049561dc9e9f
 });
 const AppointmentsSchema = new mongoose.Schema({
   shopId: Number,
@@ -49,6 +63,7 @@ const CustomerModel = mongoose.model("customer", customerSchema);
 const ShopsModel = mongoose.model("shops", ShopsSchema);
 const AppointmentsModel = mongoose.model("appointment", AppointmentsSchema);
 
+<<<<<<< HEAD
 user1 = new UserModel({
   id: 4,
   email: "String",
@@ -156,6 +171,8 @@ appointment1 = new AppointmentsModel({
 //   }
 // });
 
+=======
+>>>>>>> e1b8e3f406f2ec4dbbc8f5745111049561dc9e9f
 module.exports.UserModel = UserModel;
 module.exports.OwnerModel = OwnerModel;
 module.exports.CustomerModel = CustomerModel;

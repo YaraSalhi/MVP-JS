@@ -22,7 +22,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("src"));
 const reservationsModel = require("./models/item.js").reservationsModel;
+<<<<<<< HEAD
 const hallsModel = require("./models/item.js").hallsModel;
+=======
+>>>>>>> e1b8e3f406f2ec4dbbc8f5745111049561dc9e9f
 const ShopsModel = require("./models/item.js").ShopsModel;
 
 app.get("/", (req, res) => {
@@ -35,9 +38,15 @@ app.get("/reservations", (req, res) => {
     res.json(reservationsModel);
   });
 });
+<<<<<<< HEAD
 app.get("/halls", (req, res) => {
   hallsModel.find({}).then(hallsModel => {
     res.json(hallsModel);
+=======
+app.get("/shops", (req, res) => {
+  ShopsModel.find({ description: "hall" }).then(ShopsModel => {
+    res.json(ShopsModel);
+>>>>>>> e1b8e3f406f2ec4dbbc8f5745111049561dc9e9f
   });
 });
 ////////Basima part:
