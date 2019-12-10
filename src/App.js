@@ -3,11 +3,10 @@ import React from "react";
 import "./App.css";
 import $ from "jquery";
 import Album from "./album";
-import PrimarySearchAppBar from "./NavBar";
+// import PrimarySearchAppBar from "./NavBar";
 import { red } from "@material-ui/core/colors";
 
-import NavBar from "./NavBar";
-import DateSelector from "./Calender";
+import NavBar from "./navbar";
 
 class App extends React.Component {
   constructor(props) {

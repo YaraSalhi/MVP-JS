@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import AppF from "./AppF";
-<<<<<<< HEAD
-=======
+
 import Item from "./Item";
 //import Slider from './slider/slider'
 // import Itempage from "./itempage";
@@ -13,14 +12,14 @@ import Item from "./Item";
 // import Home from "./home";
 // import Payment from "./payment";
 import * as serviceWorker from "./serviceWorker";
->>>>>>> e1b8e3f406f2ec4dbbc8f5745111049561dc9e9f
+
 import App from "./App";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import ItemComponent from "./itemComponent";
 import Owner from "./ownerProfile";
 const css = `
     .my-element {
-        marginTop:100px;
+        marginTop:70px;
         list-style-type:none
     }
 `;
@@ -49,4 +48,4 @@ const routing = (
 // ReactDOM.render(routing, document.getElementById("root"));
 // ReactDOM.render(<AppF />, document.getElementById("root"));
 
-ReactDOM.render(<Owner />, document.getElementById("root2"));
+ReactDOM.render(<ItemComponent />, document.getElementById("root2"));

@@ -1,6 +1,6 @@
 import React from "react";
 import ListItem from "./ListItem";
-import NavBar from "./NavBar";
+import NavBar from "./navbar";
 
 export default class AppF extends React.Component {
   render() {

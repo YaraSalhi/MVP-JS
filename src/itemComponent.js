@@ -10,6 +10,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 // import MediaCard from "./cardForItem";
+import NavBar from "./navbar";
 import SimpleImageSlider from "react-simple-image-slider";
 
 export default class ItemComponent extends Component {
@@ -66,7 +67,8 @@ export default class ItemComponent extends Component {
         minWidth: 400,
         minHeight: 600,
         float: "left",
-        marginLeft: "4rem",
+        marginLeft: "30%",
+
         marginTop: "3rem",
         fontSize: "36px"
       },
@@ -135,7 +137,7 @@ export default class ItemComponent extends Component {
             <Button
               variant="contained"
               color="secondary"
-              style={{ height: "4rem", fontSize: "1.5rem" }}
+              style={{ height: "4rem", fontSize: "1.5rem",marginRight:"6rem" }}
             >
               see available time
             </Button>
@@ -147,16 +149,22 @@ export default class ItemComponent extends Component {
     return (
       <div>
         {" "}
-        {/* <NavBar /> */}
+        <NavBar />
         <span style={{ display: "inline" }}>
-          <SimpleImageSlider
+          <center>
+            <SimpleImageSlider
             style={{ marginTop: "8rem" }}
-            width={900}
+            width={1200}
             height={400}
             images={this.state.imageSlider}
           />
-
+          </center>
+          <center>
           <MediaCard />
+          </center>
+          
+
+          
         </span>
         <iframe
           //   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13536.790522042322!2d35.83889189999999!3d31.9826576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca185283dfb89%3A0x611dda32fcd10faa!2z2LPZitiq2Yog2YXZiNmE!5e0!3m2!1sar!2sjo!4v1575807547103!5m2!1sar!2sjo"
