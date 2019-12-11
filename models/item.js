@@ -43,16 +43,21 @@ const AppointmentsSchema = new Schema({
   timeSlot: Number,
   date: Number,
   customerId: Number,
-  
-
 });
 
+const cartSchema = new Schema({
+  cartId: String,
+  useId: String,
+  itemId: String
+});
 
 const UserModel = mongoose.model("user", userSchema);
 const OwnerModel = mongoose.model("owner", ownerSchema);
 const CustomerModel = mongoose.model("customer", customerSchema);
 const ShopsModel = mongoose.model("shops", ShopsSchema);
 const AppointmentsModel = mongoose.model("appointment", AppointmentsSchema);
+const CartModel = mongoose.model("cart", cartSchema);
+
 
 
 
@@ -89,13 +94,19 @@ appointment1 = new  AppointmentsModel({
   timeSlot: 1,
   date:2,
   customerId: 2,
-})
+});
+
+cart1 = new CartModel ({
+  cartId: "String",
+  useId: "String",
+  itemId: "String"
+});
 
 
     
 user1.save((error,result)=>{
       if(error){
-        console.log("errrrrror",error
+        console.log("user",error
         )
       }
       else{
@@ -106,7 +117,7 @@ user1.save((error,result)=>{
 
    owner1.save((error,result)=>{
       if(error){
-       console.log("restaurants error",error
+       console.log("owner error",error
       )
       }
       else{
@@ -116,7 +127,7 @@ user1.save((error,result)=>{
 
 customer1.save((error,result)=>{
         if(error){
-        console.log("user error",error
+        console.log("customer error",error
         )
         }
         else{
@@ -127,7 +138,7 @@ customer1.save((error,result)=>{
 
 shops1.save((error,result)=>{
      if(error){
-    console.log("cakeshops error",error
+    console.log("shops error",error
         )
         }
     else{
@@ -138,7 +149,7 @@ shops1.save((error,result)=>{
 
 appointment1.save((error,result)=>{
     if(error){
-     console.log("saloons error",error
+     console.log("appointment error",error
         )
         }
     else{
@@ -146,12 +157,24 @@ appointment1.save((error,result)=>{
     }
     });
 
+    cart1.save((error,result)=>{
+      if(error){
+       console.log("cart error",error
+          )
+          }
+      else{
+      console.log("cart done")
+      }
+      });
+
 
 module.exports.UserModel = UserModel;
 module.exports.OwnerModel=OwnerModel;
 module.exports.CustomerModel=CustomerModel;
 module.exports.ShopsModel=ShopsModel;
 module.exports.AppointmentsModel=AppointmentsModel;
+module.exports.CartModel=CartModel;
+
 
 
 
