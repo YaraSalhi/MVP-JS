@@ -3,8 +3,6 @@ import React from 'react';
 import './App.css';
 import $ from 'jquery';
 import Album from './album';
-import PrimarySearchAppBar from "./NavBar";
-import { red } from '@material-ui/core/colors';
 
 import NavBar from "./NavBar";
 
