@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.7.1",
     "@material-ui/icons": "^4.5.1",
+    "@paypal/checkout-server-sdk": "^1.0.2",
     "axios": "^0.19.0",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
@@ -49,5 +50,16 @@
     "redux-devtools": "^3.5.0"
   },
   "homepage": "https://AAlbarqi.github.io/MVP-JS/",
-  "proxy": "http://localhost:8000"
+  "proxy": "http://localhost:8000",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YaraSalhi/MVP-JS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YaraSalhi/MVP-JS/issues"
+  }
 }
